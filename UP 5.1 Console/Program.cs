@@ -12,12 +12,12 @@ namespace UP_5._1_Console
         {
             try
             {
-                if (x == 0) throw new Exception("X не может равняться 0!");
+                if (x * x - 1 < 0) throw new Exception($"При x = {Math.Round(x, 2)} функция не определена!");
                 Console.Write(Math.Sqrt(x * x - 1));
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.Write(ex.Message);
             }
         }
         static void Main(string[] args)
@@ -43,7 +43,7 @@ namespace UP_5._1_Console
             Console.WriteLine("x\t|y\t"); Console.WriteLine("==================");
             for (double x = a; x <= b; x += h)
             {
-                Console.Write($"{x}\t|"); 
+                Console.Write($"{Math.Round(x, 2)}\t|"); 
                 Function(x); 
                 Console.WriteLine();
             }
