@@ -10,6 +10,7 @@ namespace UP_5._1_Console
     {
         static void Function(double x)
         {
+            x = Math.Round(x, 2);
             try
             {
                 if (x * x - 1 < 0) throw new Exception($"При x = {Math.Round(x, 2)} функция не определена!");
